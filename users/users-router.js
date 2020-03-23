@@ -1,11 +1,11 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const Users = require('./users-model.js');
+const Users = require("./users-model.js");
 
-router.get('/', (req, res) => {
-    Users.find()
+router.get("/", (req, res) => {
+  Users.find()
     .then(users => {
-        res.json(users);
+      res.json(users);
     })
     .catch(err => res.send(err));
 });
